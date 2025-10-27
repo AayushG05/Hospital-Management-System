@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Doctor Appointments</title>
+  <link rel="stylesheet" href="../../receptionist-dashboard/receptionist-dashboard.css">
+  <link rel="stylesheet" href="../doctorAppointments-page/doctorAppointments.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="../logo.jpg" class="logo-img" alt="Logo">
+    <span class="logo-text">HospitalSys</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../../Main-page/index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="../doctorAppointments-page/doctorAppointments.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+    <li><a href="../Prescription-page/Prescription.html"><i class="fa-solid fa-prescription"></i></i> Prescriptions</a></li>
+    <li><a href="../../Login-page/login.html"><i class="fa-solid fa-right-from-bracket"></i></i> Logout</a></li>
+  </ul>
+</nav>
+
+<div class="dashboard-light page-container">
+  <section class="section-light">
+    <h2>My Appointments</h2>
+
+    <!-- If doctor name is not provided in URL query ?doctor=Name, page shows all -->
+    <div class="search-row">
+      <input id="searchName" placeholder="Patient name" />
+      <input id="searchPhone" placeholder="Patient phone" />
+      <input id="searchDate" type="date" />
+      <button id="searchBtn">Search</button>
+      <button id="showAllBtn">Show All</button>
+    </div>
+
+    <table class="appt-table">
+      <thead>
+        <tr>
+          <th>Done</th>
+          <th>Patient</th>
+          <th>Phone</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Notes</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="apptList">
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<script src="doctorAppointments.js"></script>
+</body>
+</html>

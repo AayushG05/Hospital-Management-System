@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | HospitalSys</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="logo-section">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h2>HospitalSys</h2>
+      </div>
+
+      <h3>Register As</h3>
+      <select id="roleSelect" onchange="toggleFields()">
+        <option value="" disabled selected>Select Role</option>
+        <option value="doctor">Doctor</option>
+        <option value="receptionist">Receptionist</option>
+      </select>
+
+      <form id="registerForm">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <!-- Doctor Specific Fields -->
+        <div id="doctorFields" style="display: none;">
+          <input type="text" name="specialization" placeholder="Specialization">
+          <input type="text" name="experience" placeholder="Years of Experience">
+          <input type="text" name="degree" placeholder="Degree / Qualification">
+          <input type="text" name="university" placeholder="University / College Attended">
+
+          <label>Available Days:</label>
+          <div class="days-checkboxes">
+            <label><input type="checkbox" name="days" value="Monday"> Mon</label>
+            <label><input type="checkbox" name="days" value="Tuesday"> Tue</label>
+            <label><input type="checkbox" name="days" value="Wednesday"> Wed</label>
+            <label><input type="checkbox" name="days" value="Thursday"> Thu</label>
+            <label><input type="checkbox" name="days" value="Friday"> Fri</label>
+            <label><input type="checkbox" name="days" value="Saturday"> Sat</label>
+            <label><input type="checkbox" name="days" value="Sunday"> Sun</label>
+          </div>
+
+          <label>Available Time Slots:</label>
+          <input type="text" name="timeSlots" placeholder="e.g., 10:00 AM - 1:00 PM, 4:00 PM - 7:00 PM">
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

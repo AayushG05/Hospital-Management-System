@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients Dashboard</title>
+    <link rel="stylesheet" href="../receptionist-dashboard.css">
+    <link rel="stylesheet" href="PatientRegister.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src="../logo.jpg" alt="Logo" class="logo-img" />
+        <span class="logo-text">HospitalSys</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../../Main-page/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="../Appointments-page/appointments.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+        <li><a href="../PatientRegister-page/PatientRegister.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+        <li><a href="../DcotorRegister-page/DoctorRegister.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+        <li><a href="../../Login-page/login.html"><i class="fa-solid fa-right-from-bracket"></i></i> Logout</a></li>
+    </ul>
+</nav>
+
+<div class="dashboard-light page-container">
+
+    <!-- Add New Patient -->
+    <section class="section-light">
+        <h2>Add New Patient</h2>
+        <form id="patientForm">
+            <input type="text" id="patientName" placeholder="Patient Name" required>
+            <input type="email" id="patientEmail" placeholder="Patient Email" required>
+            <input type="text" id="patientPhone" placeholder="Patient Phone" required>
+            <input type="number" id="patientAge" placeholder="Age">
+            <select id="patientGender"
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" id="patientAddress" placeholder="Address">
+            <button type="submit">Add Patient</button>
+        </form>
+    </section>
+
+    <!-- Search Patients -->
+    <section class="section-light">
+        <h2>Search Patients</h2>
+        <div class="search-container">
+            <input type="text" id="searchName" placeholder="Search by Name">
+            <input type="email" id="searchEmail" placeholder="Search by Email">
+            <input type="tel" id="searchPhone" placeholder="Search by Phone">
+            <button id="searchBtn">Search</button>
+        </div>
+    </section>
+
+    <!-- Patient List -->
+    <section class="section-light">
+        <h2>Patient List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="patientList">
+                <!-- Dynamically populated -->
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script src="PatientRegister.js"></script>
+</body>
+</html>

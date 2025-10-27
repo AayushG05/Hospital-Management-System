@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin — Doctor Data</title>
+  <link rel="stylesheet" href="../admin-dashboard.css">
+  <link rel="stylesheet" href="doctorData.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar (matches other pages style) -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="../logo.jpg" alt="Logo" class="logo-img" />
+    <span class="logo-text">HospitalSys - Admin</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../admin-dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="../DoctorData-page/doctorData.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+    <li><a href="../ReceptionistData-page/receptionistData.html"><i class="fas fa-user"></i> Receptionists</a></li>
+    <li><a href="../../Login-page/login.html"><i class="fa-solid fa-right-from-bracket"></i></i> Logout</a></li>
+  </ul>
+</nav>
+
+<div class="dashboard-light page-container">
+  <section class="section-light">
+    <h2>Doctor Management</h2>
+
+    <!-- Add / Edit Doctor -->
+    <form id="addDoctorForm" class="mini-form">
+      <div class="form-grid">
+        <input id="d_name" placeholder="Full name" required />
+        <input id="d_email" type="email" placeholder="Email" required />
+        <input id="d_phone" placeholder="Phone" required />
+        <input id="d_specialization" placeholder="Specialization" />
+      </div>
+      <div style="display:flex;gap:10px;">
+        <button type="submit" class="btn-primary">Add Doctor</button>
+        <button type="button" id="clearForm" class="btn-muted">Clear</button>
+      </div>
+    </form>
+
+    <!-- Search / Sort -->
+    <div class="search-row">
+      <input id="searchName" placeholder="Search by name" />
+      <input id="searchEmail" placeholder="Search by email" />
+      <input id="searchPhone" placeholder="Search by phone" />
+      <input id="searchSpec" placeholder="Search by specialization" />
+      <select id="sortSelect">
+        <option value="">Sort by</option>
+        <option value="name">Name (A–Z)</option>
+        <option value="phone">Phone</option>
+        <option value="email">Email</option>
+      </select>
+      <button id="searchBtn" class="btn-primary">Search</button>
+      <button id="resetBtn" class="btn-muted">Reset</button>
+    </div>
+
+    <!-- Doctor list -->
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Name</th><th>Email</th><th>Phone</th><th>Specialization</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="doctorTableBody">
+        <!-- filled by JS -->
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<script src="doctorData.js"></script>
+</body>
+</html>

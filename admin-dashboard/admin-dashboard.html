@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="logo.jpg" alt="Logo" class="logo-img" />
+    <span class="logo-text">HospitalSys</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="#"><i class="fas fa-user-md"></i> Users</a></li>
+    <li><a href="#"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+    <li><a href="#"><i class="fas fa-user-injured"></i> Patients</a></li>
+    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+  </ul>
+</nav>
+
+<div class="dashboard-light">
+  <h2>Welcome, Admin</h2>
+
+  <!-- User Management -->
+  <section class="section-light">
+    <h3>Manage Users (Doctors & Receptionists)</h3>
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <select id="role" required>
+        <option value="">Select Role</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Receptionist">Receptionist</option>
+      </select>
+      <input type="text" id="email" placeholder="Email" required>
+      <button type="submit">Add User</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userList">
+        <!-- Mock users will be loaded here -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Appointments -->
+  <section class="section-light">
+    <h3>All Appointments</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Rahul</td><td>Dr. Sneha</td><td>2025-07-28 10:00</td></tr>
+        <tr><td>Priya</td><td>Dr. Aayush</td><td>2025-07-29 12:30</td></tr>
+        <tr><td>Ankit</td><td>Dr. Sneha</td><td>2025-07-30 15:00</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Patients -->
+  <section class="section-light">
+    <h3>All Patients</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Aarti</td><td>26</td><td>9876543210</td></tr>
+        <tr><td>Karan</td><td>32</td><td>9823456789</td></tr>
+        <tr><td>Suman</td><td>40</td><td>9871122334</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<script src="admin-dashboard.js"></script>
+</body>
+</html>

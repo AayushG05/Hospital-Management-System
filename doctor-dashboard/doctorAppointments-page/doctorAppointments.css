@@ -1,0 +1,12 @@
+/* doctorAppointments.css - matches your color scheme */
+.dashboard-light { padding: 24px; background: #f0f8ff; color: #003366; min-height: 100vh; }
+.section-light { background: #fff; padding: 18px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.search-row { display:flex; gap:10px; margin-bottom:12px; flex-wrap:wrap; }
+.search-row input, .search-row button { padding:8px 10px; border-radius:6px; border:1px solid #cfcfcf; }
+.appt-table { width:100%; border-collapse: collapse; margin-top:8px; }
+.appt-table th, .appt-table td { padding:10px; border-bottom:1px solid #e6eef8; text-align:left; }
+.appt-table th { background:#e6f0ff; }
+.btn-delete { background:#ff4d4d; color:#fff; border:none; padding:6px 8px; border-radius:6px; cursor:pointer; }
+.btn-delete:hover { opacity:.9; }
+.done-checkbox { transform:scale(1.15); }
+.small-muted { color:#6b7a89; font-size:13px; }

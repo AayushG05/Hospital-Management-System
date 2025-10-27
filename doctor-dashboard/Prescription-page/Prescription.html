@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Prescription</title>
+  <link rel="stylesheet" href="../../receptionist-dashboard/receptionist-dashboard.css">
+  <link rel="stylesheet" href="../Prescription-page/Prescription.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="../logo.jpg" class="logo-img" alt="Logo"><span class="logo-text">HospitalSys</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="../receptionist-dashboard/receptionist.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="../doctorAppointments-page/doctorAppointments.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+    <li><a href="../Prescription-page/Prescription.html"><i class="fa-solid fa-prescription"></i> Prescriptions</a></li>
+    <li><a href="../../Login-page/login.html"><i class="fa-solid fa-right-from-bracket"></i></i> Logout</a></li>
+  </ul>
+</nav>
+
+<div class="dashboard-light page-container">
+  <section class="section-light">
+    <h2>Create Prescription</h2>
+    <form id="prescriptionForm">
+      <div id="patientMatches" class="small-muted"></div>
+
+      <input id="prescPatientName" placeholder="Patient name" required />
+      <input id="prescPatientEmail" placeholder="Patient email" required />
+      <input id="prescPatientPhone" placeholder="Patient phone" />
+
+      <textarea id="medicines" placeholder="Medicines / Dosage (one per line)" rows="4"></textarea>
+      <textarea id="notes" placeholder="Notes / Instructions" rows="3"></textarea>
+      <button type="submit">Save Prescription</button>
+    </form>
+  </section>
+
+  <section class="section-light">
+    <h2>My Prescriptions</h2>
+    <table>
+      <thead>
+        <tr><th>Patient</th><th>Medicines</th><th>Notes</th><th>Date</th><th>Actions</th></tr>
+      </thead>
+      <tbody id="prescList"></tbody>
+    </table>
+  </section>
+</div>
+
+<script src="Prescription.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* receptionistData.css - matches admin/doctor color scheme and navbar */
+
+/* Base */
+:root{
+  --primary:#003366;
+  --accent:#00bcd4;
+  --muted:#6b7a89;
+  --card-bg:#ffffff;
+  --page-bg:#f0f8ff;
+}
+
+body{
+  margin:0;
+  font-family: Inter, Arial, sans-serif;
+  background:var(--page-bg);
+  color:var(--primary);
+}
+
+/* Navbar */
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 20px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.06);
+}
+.navbar-left{display:flex;align-items:center;}
+.logo-img{height:38px;margin-right:10px}
+.logo-text{color:var(--accent);font-weight:700}
+.nav-links{list-style:none;margin:0;display:flex;gap:18px}
+.nav-links a{color:var(--primary);text-decoration:none;font-weight:500}
+.nav-links a.active{color:var(--accent);font-weight:700}
+
+/* Page container */
+.page-container{padding:20px}
+.section-light{
+  background:var(--card-bg);padding:18px;border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,51,102,0.04);
+}
+.section-light h2{margin-top:0;color:var(--primary)}
+
+/* Form grid */
+.mini-form .form-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px
+}
+.mini-form input{padding:10px;border-radius:6px;border:1px solid #ccdbe8}
+
+/* Search row */
+.search-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+.search-row input, .search-row select{padding:8px;border-radius:6px;border:1px solid #ccdbe8}
+
+/* Buttons */
+.btn-primary{background:var(--primary);color:#fff;padding:8px 12px;border:none;border-radius:6px;cursor:pointer}
+.btn-muted{background:#e9f1fb;color:var(--primary);padding:8px 12px;border:none;border-radius:6px;cursor:pointer}
+
+/* Table */
+.data-table{width:100%;border-collapse:collapse;margin-top:10px}
+.data-table th, .data-table td{padding:10px;border-bottom:1px solid #eef6ff;text-align:left}
+.data-table th{background:#e6f0ff}
+.action-btn{background:#ff4d4d;color:#fff;border:none;padding:6px 8px;border-radius:6px;cursor:pointer}
+.action-btn.edit{background:var(--accent)}
+.small-muted{color:var(--muted);font-size:13px}
+
+/* Responsive adjustments */
+@media (max-width:1100px){
+  .mini-form .form-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:700px){
+  .mini-form .form-grid{grid-template-columns:repeat(1,1fr)}
+  .search-row{flex-direction:column;align-items:stretch}
+}

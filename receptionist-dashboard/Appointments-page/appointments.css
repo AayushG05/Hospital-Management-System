@@ -1,0 +1,108 @@
+/* Light Theme Dashboard */
+.dashboard-light {
+  padding: 30px;
+  background-color: #f0f8ff;
+  min-height: 100vh;
+  color: #003366;
+}
+
+.section-light {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
+}
+
+.section-light h3 {
+  margin-bottom: 15px;
+}
+
+form input, form select, form button {
+  margin: 8px 10px 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0059b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+ul#patientDetails {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul#patientDetails li {
+  padding: 8px;
+  background-color: #e6f0ff;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 30px;
+  color: white;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}

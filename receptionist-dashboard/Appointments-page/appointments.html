@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointments Dashboard</title>
+    <link rel="stylesheet" href="../receptionist-dashboard.css">
+    <link rel="stylesheet" href="Appointments.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src="../logo.jpg" alt="Logo" class="logo-img" />
+        <span class="logo-text">HospitalSys</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../../Main-page/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="../Appointments-page/appointments.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+        <li><a href="../PatientRegister-page/PatientRegister.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+        <li><a href="../DcotorRegister-page/DoctorRegister.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+        <li><a href="../../Login-page/login.html"><i class="fa-solid fa-right-from-bracket"></i></i> Logout</a></li>
+    </ul>
+</nav>
+
+<div class="dashboard-light page-container">
+
+    <!-- Add New Appointment -->
+    <section class="section-light">
+        <h2>Add New Appointment</h2>
+        <form id="appointmentForm">
+          <input type="text" id="patientName" placeholder="Patient Name" required>
+          <input type="email" id="patientEmail" placeholder="Patient Email" required>
+          <input type="text" id="patientPhone" placeholder="Patient Phone" required>
+          <select id="doctorSelect" required>
+              <option value="">Select Doctor</option>
+              <option value="Dr. Aayush">Dr. Aayush</option>
+              <option value="Dr. Sneha">Dr. Sneha</option>
+          </select>
+          <input type="datetime-local" id="appointmentDateTime" required>
+          <input type="text" id="notes" placeholder="Notes">
+          <button type="submit">Add Appointment</button>
+        </form>
+    </section>
+
+    <!-- Search Appointment -->
+    <section class="section-light">
+        <h2>Search Appointments</h2>
+        <div class="search-container">
+            <input type="text" id="searchPatientName" placeholder="Search by Patient Name">
+            <input type="email" id="searchPatientEmail" placeholder="Search by Patient Email">
+            <input type="tel" id="searchPatientPhone" placeholder="Search by Patient Phone">
+            <select id="searchDoctor">
+                <option value="">Search by Doctor</option>
+                <option value="Dr. Aayush">Dr. Aayush</option>
+                <option value="Dr. Sneha">Dr. Sneha</option>
+            </select>
+            <input type="date" id="searchDate">
+            <button id="searchBtn">Search</button>
+        </div>
+    </section>
+
+    <!-- Appointment List -->
+    <section class="section-light">
+        <h2>Appointment List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Doctor</th>
+                    <th>Date / Time</th>
+                    <th>Notes</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentList">
+                <!-- Dynamically populated -->
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script src="Appointments.js"></script>
+</body>
+</html>

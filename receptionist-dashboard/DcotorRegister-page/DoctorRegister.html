@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Register</title>
+    <link rel="stylesheet" href="../receptionist-dashboard.css">
+    <!-- <link rel="stylesheet" href="../DcotorRegister-page/DoctorRegister.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="navbar-left">
+        <img src="../logo.jpg" alt="Logo" class="logo-img" />
+        <span class="logo-text">HospitalSys</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="../../Main-page/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="../Appointments-page/appointments.html"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+        <li><a href="../PatientRegister-page/PatientRegister.html"><i class="fas fa-user-injured"></i> Patients</a></li>
+        <li><a href="../DcotorRegister-page/DoctorRegister.html"><i class="fas fa-user-md"></i> Doctors</a></li>
+        <li><a href="../../Login-page/login.html"><i class="fa-solid fa-right-from-bracket"></i></i> Logout</a></li>
+    </ul>
+</nav>
+
+<div class="dashboard-light page-container">
+
+    <!-- Add New Doctor -->
+    <section class="section-light">
+        <h2>Add New Doctor</h2>
+        <form id="doctorForm">
+            <input type="text" id="doctorName" placeholder="Full Name" required>
+            <input type="email" id="doctorEmail" placeholder="Email" required>
+            <input type="text" id="doctorPhone" placeholder="Phone Number" required>
+            <input type="text" id="specialization" placeholder="Specialization" required>
+            <select id="availability" required>
+                <option value="">Select Availability</option>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+            </select>
+            <button type="submit">Add Doctor</button>
+        </form>
+    </section>
+
+    <!-- Search Doctor -->
+    <section class="section-light">
+        <h2>Search Doctors</h2>
+        <div class="search-container">
+            <input type="text" id="searchName" placeholder="Search by Name">
+            <input type="email" id="searchEmail" placeholder="Search by Email">
+            <input type="tel" id="searchPhone" placeholder="Search by Phone">
+            <input type="text" id="searchSpecialization" placeholder="Search by Specialization">
+            <select id="searchAvailability">
+                <option value="">Search by Availability</option>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+            </select>
+            <button id="searchBtn">Search</button>
+        </div>
+    </section>
+
+    <!-- Doctor List -->
+    <section class="section-light">
+        <h2>Doctor List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Specialization</th>
+                    <th>Availability</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="doctorList">
+                <!-- Dynamically populated -->
+            </tbody>
+        </table>
+    </section>
+
+</div>
+
+<script src="DoctorRegister.js"></script>
+</body>
+</html>

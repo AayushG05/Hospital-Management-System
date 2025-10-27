@@ -1,0 +1,5 @@
+/* Prescription.css - keep same theme */
+.section-light { background:#fff; padding:18px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+form input, form textarea, form button { display:block; width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #d0d7e6;}
+form button { background:#004080; color:#fff; border:none; cursor:pointer; }
+.small-muted { color:#6b7a89; font-size:13px; margin-bottom:6px; }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Receptionist Dashboard</title>
+  <link rel="stylesheet" href="receptionist-dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="logo.jpg" alt="Logo" class="logo-img" />
+    <span class="logo-text">HospitalSys</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="#"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+    <li><a href="#"><i class="fas fa-user-injured"></i> Patients</a></li>
+    <li><a href="#"><i class="fas fa-prescription-bottle-alt"></i> Prescriptions</a></li>
+    <li><a href="#"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+  </ul>
+</nav>
+
+<!-- Dashboard -->
+<div class="dashboard-light">
+  <h2>Welcome, Receptionist</h2>
+
+  <!-- Register New Patient -->
+  <section class="section-light">
+    <h3>Register New Patient</h3>
+    <form id="registerForm">
+      <input type="text" id="patientName" placeholder="Full Name" required>
+      <input type="number" id="patientAge" placeholder="Age" required>
+      <input type="text" id="patientContact" placeholder="Contact Number" required>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- Book Appointment -->
+  <section class="section-light">
+    <h3>Book New Appointment</h3>
+    <form id="appointmentForm">
+      <input type="text" id="appointmentPatient" placeholder="Patient Name" required>
+      <select id="appointmentDoctor" required>
+        <option value="">Select Doctor</option>
+        <option value="Dr. Aayush">Dr. Aayush</option>
+        <option value="Dr. Sneha">Dr. Sneha</option>
+      </select>
+      <input type="datetime-local" id="appointmentDateTime" required>
+      <button type="submit">Book Appointment</button>
+    </form>
+  </section>
+
+  <!-- Appointment List -->
+  <section class="section-light">
+    <h3>Appointment List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Date/Time</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="appointmentList">
+        <!-- Appointments will be added here -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Patient Details Section -->
+  <div style="margin: 40px; padding: 20px; background-color: #f8fbff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);">
+    <h2 style="margin-bottom: 20px;">Patient Details</h2>
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr style="background-color: #e6f0ff;">
+          <th style="padding: 10px;">Name</th>
+          <th style="padding: 10px;">Age</th>
+          <th style="padding: 10px;">Contact</th>
+          <th style="padding: 10px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="patientList">
+        <!-- Patients will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="receptionist-dashboard.js"></script>
+</body>
+</html>
