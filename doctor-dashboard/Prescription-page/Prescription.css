@@ -3,3 +3,52 @@
 form input, form textarea, form button { display:block; width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #d0d7e6;}
 form button { background:#004080; color:#fff; border:none; cursor:pointer; }
 .small-muted { color:#6b7a89; font-size:13px; margin-bottom:6px; }
+
+/* 🔍 Advanced Search Section */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 18px;
+}
+
+.search-container input,
+.search-container select {
+  padding: 8px 12px;
+  border: 1px solid #d1e3ff;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.search-container input:focus,
+.search-container select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+.search-container select {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}

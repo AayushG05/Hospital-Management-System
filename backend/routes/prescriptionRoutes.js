@@ -1,6 +1,9 @@
-// backend/routes/prescriptionRoutes.js
 import express from "express";
-import { addPrescription, getPrescriptions, deletePrescription } from "../controllers/prescriptionController.js";
+import {
+  addPrescription,
+  getPrescriptions,
+  deletePrescription
+} from "../controllers/prescriptionController.js";
 
 const router = express.Router();
 
